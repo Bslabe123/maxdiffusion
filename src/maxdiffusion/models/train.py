@@ -457,6 +457,7 @@ def train(config):
                    vae_state_mesh_shardings,
                    pipeline, params, mesh, rng)
            max_utils.save_checkpoint(pipeline, params, unet_state, noise_scheduler, config, config.checkpoint_dir+f"/{str(step * total_train_batch_size)}/")
+           mllog_utils.train_checkpoint_step_log(config, step)
         # Start profiling at end of first step to avoid compilation.
         # Move before for loop to include.
         if step == first_profiling_step:
