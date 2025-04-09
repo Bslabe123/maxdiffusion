@@ -130,7 +130,8 @@ _deps = [
     "orbax-checkpoint",
     "cloud-tpu-diagnostics",
     "tensorboardx",
-    "tensorboard-plugin-profile"
+    "tensorboard-plugin-profile",
+    "aqtp"
 ]
 
 # this is a lookup table with items like:
